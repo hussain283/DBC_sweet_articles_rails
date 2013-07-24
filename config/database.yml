@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  username:
+  password:
+  host: localhost
+  timeout: 5000
+
+development:
+  <<: *common
+  database: sa_dev
+
+test:
+  <<: *common
+  database: sa_test
+
+production:
+  <<: *common
+  database: sa
